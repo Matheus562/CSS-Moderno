@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: darkgray;
+  min-height: 100vh; /*Area da borda*/
+  display: grid; /*Organiza como matriz*/
+  grid-template-columns: 1fr 2fr 1fr 1fr; /*largura das colunas*/
+  gap: 10px 15px; /*Distanciamento entre as bordas*/
+  grid-auto-rows: minmax(
+    310px,
+    auto
+  ); /* tamanho das bordas se adequa ao tamanho do texto*/
+}
+.item {
+  border: 2px solid #000000;
+  background-color: #ffffff; /*cor do fundo*/
+  font-size: 25px;
+  padding: 10px;
+}

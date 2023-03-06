@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+.background {
+  background-color: #5650509a;
+}
+.container {
+  min-height: 100vh; /*altura minima, preencher toda tela*/
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  min-height: 40px;
+  background-color: #292929;
+  display: flex; /*Alinha os botões com a logo*/
+  align-items: center; /*centraliza os botões verticalmente no header*/
+  justify-content: space-between; /*Posiciona os botões na extremidade direita do header*/
+  flex-wrap: wrap; /*define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas*/
+  padding: 30px; /*Espaçamento*/
+  gap: 10px 15px; /*Distancia a logo dos botões após a quebra*/
+}
+.logoNavBar {
+  width: 180px; /*Manipula o tamanho da logo*/
+}
+.headerBtnGroup {
+  /*Aumenta o distanciamento entre os botões*/
+  display: flex;
+  gap: 15px;
+}
+.navBtn {
+  font-size: 16px; /*Tamanho da fonte dos botões*/
+  padding: 6px; /*Maior botão*/
+  background-color: transparent; /*cor de fundo botão*/
+  border: 2px solid transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.navBtn:hover {
+  /*Efeito nos botões*/
+  border-bottom: 2px solid #ff0000;
+}
+.sectionTitle {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center; /*Alinhamento horizontal do texto*/
+  padding-top: 20px; /*Distancia o texto da borda do header*/
+}
+.sectionDescription {
+  text-align: center;
+  color: #383838;
+}
+.gridContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /*3 colunas x 1 coluna*/
+  grid-template-areas: "mainContent sidebarContent";
+  padding: 20px;
+  flex: 1 0 auto; /*preencher todo espaço disponivel*/
+}
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /*Centraliza os intens*/
+  gap: 10px;
+  grid-area: mainContent;
+}
+.categoryCard {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: #747272;
+}
+.mainCardImg {
+  width: 100%;
+  height: 180px; /*altura fixa*/
+  border-radius: 10px; /*Arredonda em 10px as bordas*/
+}
+.categoryCard:hover {
+  border-color: #000000;
+  background-color: #ffffff;
+}
+.mainCategoryCardTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 6px;
+}
+.mainCategoryCardDescription {
+  padding: 6px;
+}
+.sidebarContent {
+  background-color: #383838;
+  color: #ffffff;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+  grid-area: sidebarContent;
+  gap: 20px;
+}
+.sidebarCard {
+  width: 75%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.sidebarCardImg {
+  width: 100%;
+  border-radius: 10px;
+}
+.sidebarCardTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+.sidebarCard:hover {
+  border-color: gainsboro;
+  background-color: #667270;
+}
+.footer {
+  width: 100%;
+  min-height: 40px;
+  background-color: #292929;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /*alinhamento vertical*/
+  justify-content: space-between;
+  padding: 30px;
+  gap: 15px;
+}
+.logoFooter {
+  width: 180px;
+}
+.footerAnchor {
+  color: #b50e0e;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  border: 2px solid #b50e0e;
+  padding: 6px;
+  background-color: #5650509a;
+}
+@media (max-width: 630px) {
+  .gridContainer {
+    grid-template-areas: "mainContent" "sidebarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .sidebarContent {
+    min-width: auto;
+  }
+  .footerAnchor {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 463px) {
+  /*Centraliza os itens do footer e header*/
+  .header {
+    justify-content: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
